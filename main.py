@@ -75,7 +75,7 @@ class IO:
 
 io_relay_1 = IO(17)
 switch_light_1 = Switch(io_relay_1)
-light_1 = Light()
+light_1 = Light(switch_light_1)
 
 while True:
     print("Prender: 1, Apagar: 0")
