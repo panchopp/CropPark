@@ -81,6 +81,6 @@ while True:
     print("Prender: 1, Apagar: 0")
     input_text = input()
     if input_text == "1":
-        light_1.turn_on()
+        light_1.light_on()
     else:
-        light_1.turn_off()
+        light_1.light_off()
