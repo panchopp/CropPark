@@ -65,6 +65,7 @@ class IO:
     """
     def __init__(self, pin_number):
         self.pin_number = pin_number
+        GPIO.setup(self.pin_number, GPIO.OUT) # GPIO Assign mode
 
     def on(self):
         GPIO.output(self.pin_number, GPIO.HIGH) # on
