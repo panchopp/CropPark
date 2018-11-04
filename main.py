@@ -73,15 +73,17 @@ class IO:
     def off(self):
         GPIO.output(self.pin_number, GPIO.LOW) # out
 
+def main():
+    io_relay_1 = IO(17)
+    switch_light_1 = Switch(io_relay_1)
+    light_1 = Light(switch_light_1)
 
-io_relay_1 = IO(17)
-switch_light_1 = Switch(io_relay_1)
-light_1 = Light(switch_light_1)
+    while True:
+        print("Prender: 1, Apagar: 0")
+        input_text = input()
+        if input_text == "1":
+            light_1.light_on()
+        else:
+            light_1.light_off()
 
-while True:
-    print("Prender: 1, Apagar: 0")
-    input_text = input()
-    if input_text == "1":
-        light_1.light_on()
-    else:
-        light_1.light_off()
+main()
