@@ -1,6 +1,5 @@
 import time
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM) # GPIO Numbers instead of board numbers
 
 class Scheduler:
     """
@@ -74,6 +73,7 @@ class IO:
         GPIO.output(self.pin_number, GPIO.LOW) # out
 
 def main():
+    GPIO.setmode(GPIO.BCM) # GPIO Numbers instead of board numbers
     io_relay_1 = IO(17)
     switch_light_1 = Switch(io_relay_1)
     light_1 = Light(switch_light_1)
