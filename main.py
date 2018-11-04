@@ -67,10 +67,10 @@ class IO:
         GPIO.setup(self.pin_number, GPIO.OUT) # GPIO Assign mode
 
     def on(self):
-        GPIO.output(self.pin_number, GPIO.LOW) # on
+        GPIO.output(self.pin_number, GPIO.HIGH) # on
 
     def off(self):
-        GPIO.output(self.pin_number, GPIO.HIGH) # out
+        GPIO.output(self.pin_number, GPIO.LOW) # out
 
 def main():
     GPIO.setmode(GPIO.BCM) # GPIO Numbers instead of board numbers
