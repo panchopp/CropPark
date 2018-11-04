@@ -79,7 +79,7 @@ def main():
     light_1 = Light(switch_light_1)
 
     while True:
-        print("Comienza el día")
+        print("Comienza el dia")
         light_1.light_on()
         time.sleep(10)
 
