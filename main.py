@@ -81,11 +81,9 @@ def main():
     while True:
         print("Prender: 1, Apagar: 0")
         input_text = input()
-        if input_text == "1":
-            print("lala")
+        if str(input_text) == "1":
             light_1.light_on()
         else:
-            print("lele")
             light_1.light_off()
 
 main()
