@@ -80,11 +80,12 @@ def main():
 
     while True:
         print("Comienza el dia")
+        horas_de_luz_diarias = 18
         light_1.light_on()
-        time.sleep(10)
+        time.sleep(horas_de_luz_diarias*60*60)
 
         print("Se hizo de noche")
         light_1.light_off()
-        time.sleep(3)
+        time.sleep((24-horas_de_luz_diarias)*60*60)
 
 main()
