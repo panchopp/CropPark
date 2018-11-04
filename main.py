@@ -79,11 +79,12 @@ def main():
     light_1 = Light(switch_light_1)
 
     while True:
-        print("Prender: 1, Apagar: 0")
-        input_text = input()
-        if str(input_text) == "1":
-            light_1.light_on()
-        else:
-            light_1.light_off()
+        print("Comienza el día")
+        light_1.light_on()
+        time.sleep(10)
+
+        print("Se hizo de noche")
+        light_1.light_off()
+        time.sleep(3)
 
 main()
